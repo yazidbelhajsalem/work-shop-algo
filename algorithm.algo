@@ -1,0 +1,26 @@
+ALGORITHM sentence_check
+VAR
+    numChar,numWords,numWhiteSpace,numVowels: INTEGER:=0;
+    i:INTEGER:=0;
+    text[]:STRING;
+BEGIN
+READ (text) 
+//read the keyboard(input added by the user)
+    FOR i FROM 0 TO text.length STEP step DO
+    numChar:=numChar+1;
+    //adding 1 through each iteration to have the number of characters at the end of the loop
+    IF (text[i] :=" ") THEN
+        numWhiteSpace:=numWhiteSpace+1
+    END_IF
+    //finding the number of spaces to get to know the number of words 
+    IF (text[i] :=" ") THEN
+        numWords := numWhiteSpace+1
+        //finding the number if words 
+    END_IF
+    FOR i FROM 0 TO text.length STEP step  DO
+        IF (text[i]=="a" or text[i]=="e" or text[i]=="i" or text[i]=="u") THEN
+            numVowels:=numVowels+1
+            //finding the number of vowels based on comparing the sentence to the 'a' 'e' 'i' and 'u' characters
+        END_IF
+    END_FOR
+END
